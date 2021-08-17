@@ -1,0 +1,16 @@
+dependencies:
+  - name: postgres-cluster
+    version: 0.2.1
+    repository: https://cetic.github.io/helm-charts
+    condition: postgresql.enabled
+    alias: postgresql
+  - name: elasticsearch-cluster
+    version: 7.14.0
+    repository: https://helm.elastic.co
+    condition: elasticsearch.enabled
+    alias: elasticsearch
+  - name: minio-cluster
+    version: 8.0.10
+    repository: https://helm.min.io/
+    condition: minio.enabled
+    alias: minio
